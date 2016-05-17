@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaf Mulch</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/leafmulch.css">
+</head>
+<body>
+
+<!-- Jumbotron for Title -->
+<div class="jumbotron" style="background-image: url(images/leaf-litter.png); background-size: 100%;">
+    <div class="container">
+        <div class="text-box">
+            <h1 class="text-center">Leaf Mulch Game</h1>
+            <h3 class="text-center">Use Leaf Mulch to Get Your Way!</h3>
+            <h4 class="text-center">and improve your soil too!</h4>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row-top">
+        <div class="col-lg-12">
+            <div class="players-area">
+                <!-- <div class="players-heading">
+                    <h3 class="players-title">Choose Your Character!</h3>
+                </div> -->
+                <div class="col-lg-3">
+                    <div id=tommy class= "theGroup player-up mulcher"><p>Tommy Reiner and his Friends</p><img></div> 
+                </div>      
+                <div class="col-lg-3">         
+                    <div id = "wrapper" class= "theGroup player-up mulcher"><p>Discarded Candy Wrapper</p> <img></div>
+                </div>
+                <div class="col-lg-3">
+                    <div id = "sister" class= "theGroup player-up mulcher"><p>Tommy's Little Sister</p> <img></div>
+                </div>
+                <div class="col-lg-3">
+                    <div id = "mushroom" class= "theGroup player-up mulcher"><p>A Mushroom</p> <img></div>
+                </div>                
+            </div>
+        </div>
+    </div><!--end row-top-->
+    <div class="row-mid">
+        <div class="button-area">
+            <div class="button-heading">
+                <h3 class="button-title"></h3>
+            </div>
+            <button id="button1" class="btn btn-primary mulchbutton"><img><h1>Let's Mulch!</h1></button>
+        </div>
+    </div>
+    <div class="row-play">
+        <div class="action-area">
+            <div class="col-lg-4">
+                <div class= "player-down"> </div>
+            </div>
+            <div class="col-lg-4">
+                <div class= "player-down"> </div>
+            </div>
+        </div>
+    </div>
+
+
+</div><!--end row-mid-->
+</div><!--end container-->
+
+<script type="text/javascript" src="js/leafmulch.js"></script>
+    
+</body>
+</html>

@@ -23,57 +23,66 @@ $(document).ready(function(){
         }
     };
 
-var playerCount = 0;
-var message = "Choose Your Player";
+    var playerCount = 0;
+    var message = "Choose Your Player!";
+    var tommyString = "Tommy Reiner and his Friends";
+    function findPlayer ( theId){
 
-function findPlayer ( theId){
-    switch (theId){    
-    case 'tommy': 
-    console.log("got tommy");
-    return theId;
-    break;
-    case 'sister': 
-    console.log("got sister");
-    return theId;
-    break;
-    case 'mushroom': 
-    console.log("got mushroom");
-    return theId;
-    break;
-    case 'wrapper': 
-    console.log("got wrapper");
-    return theId;
-    break;
+
+        switch (theId){    
+            case 'tommy': 
+            
+            $(theId).removeClass("player-up");
+            console.log("tommy's id is " + theId);
+            //$(theId).addClass("player-down");
+            //$(theId).addClass("player-down");
+            $(theId).appendTo("player-down");
+            return theId;
+
+            case 'sister': 
+            console.log("got sister");
+            return theId;
+            case 'mushroom': 
+            console.log("got mushroom");
+            return theId;
+            case 'wrapper': 
+            console.log("got wrapper");
+            return theId;
+
+    };//switch
 }
-}
+
+$('.players-message').text(message);
+
 $('.theGroup').on('click', function(e) {
     console.log(this.id); //the id of element that was clicked on
   //but also the property name of the chars object.
   
   $("#char-info").html(characters[this.id].href);
   console.log(this);
-
-  inPlayPlayer = findPlayer(this.id);
-  console.log("in play player " + inPlayPlayer);
-  
+  if (playerCount === 0) {
+      firstPlayPlayer = findPlayer(this.id);
+      console.log("in play player 1 " + firstPlayPlayer);
+      playerCount = 1;
+      message = "Choose your Mulching Opponent!"
+      $('.players-message').text(message);
+      console.log("tommy's id is " + this.id);
+      console.log("tommy's id is " + this.id);
+  }
+  else if (playerCount === 1) {
+    secondPlayPlayer = findPlayer(this.id);
+      console.log("in play player 2 " + secondPlayPlayer);
+      playerCount = 55;
+      message = "Get Mulching!"
+      $('.players-message').text(message);
+  }
 });
 $('.btn').on('click', function() {
+
 });
+
 /*
-switch (this.id){    
-    case 'tommy': 
-    console.log("got tommy");
-    break;
-    case 'sister': 
-    console.log("got sister");
-    break;
-    case 'mushroom': 
-    console.log("got mushroom");
-    break;
-    case 'wrapper': 
-    console.log("got wrapper");
-    break;
-}
+
 $('#player').on('click', function() {    
         var characterBoxId = this.id;
         console.log("characterBoxId " + characterBoxId);
@@ -100,7 +109,7 @@ $('#player').on('click', function() {
         $('.status-message').text(message);
     }
 }) */
-    
+
    // $('#tommy').on('click', function() {    
     //    var characterBoxId = this.id;
     //    console.log(players[characterBoxId].attackPow)        
@@ -112,7 +121,7 @@ $('#player').on('click', function() {
 //});
 
 
- 
+
 });
 
 

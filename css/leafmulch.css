@@ -38,6 +38,8 @@
 #tommy {
 	display: block;	
 }
+#tommy p {
+}
 #tommy img {	
 	box-sizing: border-box;
 	background: url(../images/tommy200.png);
